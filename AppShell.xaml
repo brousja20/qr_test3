@@ -8,7 +8,6 @@
 
     
 
-    <!-- Define the main content -->
     <ShellContent
         Title="Snaphrob"
         ContentTemplate="{DataTemplate local:MainPage}"
