@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="qr_test3.NewPage3"
+             Title="NewPage3">
+    <StackLayout>
+        <Label Text="Full Name:" FontSize="Title" />
+        <Label x:Name="FullNameLabel" FontSize="Subtitle" />
+
+        <Label Text="Year of Birth:" FontSize="Title" />
+        <Label x:Name="YearOfBirthLabel" FontSize="Subtitle" />
+
+        <Label Text="Place of Birth:" FontSize="Title" />
+        <Label x:Name="PlaceOfBirthLabel" FontSize="Subtitle" />
+
+        <Label Text="Year of Death:" FontSize="Title" />
+        <Label x:Name="YearOfDeathLabel" FontSize="Subtitle" />
+
+        <Label Text="Place of Death:" FontSize="Title" />
+        <Label x:Name="PlaceOfDeathLabel" FontSize="Subtitle" />
+
+        <Label Text="Additional Information:" FontSize="Title" />
+        <Label x:Name="AdditionalInfoLabel" FontSize="Subtitle" />
+    </StackLayout>
+</ContentPage>
