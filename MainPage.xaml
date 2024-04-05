@@ -3,9 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
              x:Class="qr_test3.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-    <zxing:CameraBarcodeReaderView
-       x:Name="barcodeReader"
-       BarcodesDetected="barcodeReader_BarcodesDetected" />
+        <zxing:CameraBarcodeReaderView Grid.Row="0" x:Name="barcodeReader" BarcodesDetected="barcodeReader_BarcodesDetected" />
 
+        <StackLayout Grid.Row="1" Orientation="Horizontal" BackgroundColor="LightGray">
+            <Button Text="Create QR Code" Clicked="Home_Clicked" HorizontalOptions="FillAndExpand" />
+            <Button Text="Settings" Clicked="About_Clicked" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </Grid>
 </ContentPage>

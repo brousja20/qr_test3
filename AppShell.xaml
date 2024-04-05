@@ -6,9 +6,13 @@
     xmlns:local="clr-namespace:qr_test3"
     Shell.FlyoutBehavior="Disabled">
 
+    
+
+    <!-- Define the main content -->
     <ShellContent
-        Title="Home"
+        Title="Snaphrob"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
 
 </Shell>

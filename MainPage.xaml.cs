@@ -22,5 +22,14 @@
                 await DisplayAlert("Barcode detected", first.Value, "Ok");
             });
         }
+        private void Home_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NewPage1());
+        }
+
+        private void About_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NewPage2());
+        }
     }
 }

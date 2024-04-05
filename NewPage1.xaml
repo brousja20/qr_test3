@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="qr_test3.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+        <Label 
+            Text="Create your own QR Code 😉"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10"
+            FontSize="20"/>
+        <Entry Placeholder="Full Name" Margin="10"></Entry>
+        <Entry Placeholder="Year of Birth" Margin="10"></Entry>
+        <Entry Placeholder="Place of Birth" Margin="10"></Entry>
+        <Entry Placeholder="Year of Death" Margin="10"></Entry>
+        <Entry Placeholder="Place of Death" Margin="10"></Entry>
+        <Entry Placeholder="Additional information" Margin="10"></Entry>
+        <Button Text="Save" Clicked="Save_Info" ></Button>
+
+    </VerticalStackLayout>
+</ContentPage>
