@@ -8,18 +8,19 @@
         <Label 
             Text="Create your own QR Code 😉"
             VerticalOptions="Center" 
+            TextColor="Black"
             HorizontalOptions="Center"
             Margin="10"
             FontSize="20"/>
-        <Entry x:Name="FullNameEntry" Placeholder="Full Name" Margin="10"></Entry>
-        <Entry x:Name="YearOfBirthEntry" Placeholder="Year of Birth" Margin="10"></Entry>
-        <Entry x:Name="PlaceOfBirthEntry" Placeholder="Place of Birth" Margin="10"></Entry>
-        <Entry x:Name="YearOfDeathEntry" Placeholder="Year of Death" Margin="10"></Entry>
-        <Entry x:Name="PlaceOfDeathEntry" Placeholder="Place of Death" Margin="10"></Entry>
-        <Entry x:Name="AdditionalInfoEntry" Placeholder="Additional information" Margin="10"></Entry>
+        <Entry x:Name="FullNameEntry" Placeholder="Full Name" Margin="10" TextColor="Black"></Entry>
+        <Entry x:Name="YearOfBirthEntry" Placeholder="Year of Birth" Margin="10" TextColor="Black"></Entry>
+        <Entry x:Name="PlaceOfBirthEntry" Placeholder="Place of Birth" Margin="10" TextColor="Black"></Entry>
+        <Entry x:Name="YearOfDeathEntry" Placeholder="Year of Death" Margin="10" TextColor="Black"></Entry>
+        <Entry x:Name="PlaceOfDeathEntry" Placeholder="Place of Death" Margin="10" TextColor="Black"></Entry>
+        <Entry x:Name="AdditionalInfoEntry" Placeholder="Additional information" Margin="10" TextColor="Black"></Entry>
         <Button Text="Save" Clicked="Save_Info" ></Button>
 
-        <zxing:BarcodeGeneratorView x:Name="qrCode" Format="QrCode" ForegroundColor="Red" WidthRequest="200" HeightRequest="200" />
+        <zxing:BarcodeGeneratorView x:Name="qrCode" Format="QrCode" ForegroundColor="#005143" WidthRequest="200" HeightRequest="200" />
 
     </VerticalStackLayout>
 </ContentPage>
