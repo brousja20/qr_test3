@@ -4,22 +4,34 @@
              x:Class="qr_test3.NewPage3"
              Title="NewPage3">
     <StackLayout>
-        <Label Text="Full Name:" FontSize="Title" />
-        <Label x:Name="FullNameLabel" FontSize="Subtitle" />
+        <StackLayout Padding="10,0,0,0">
+            <Label Text="Full Name:" TextColor="Black" FontSize="Title" />
+            <Label x:Name="FullNameLabel" TextColor="Black" FontSize="Subtitle" />
+        </StackLayout>
 
-        <Label Text="Year of Birth:" FontSize="Title" />
-        <Label x:Name="YearOfBirthLabel" FontSize="Subtitle" />
+        <StackLayout Padding="10,0,0,0">
+            <Label Text="Year of Birth:" TextColor="Black" FontSize="Title" />
+            <Label x:Name="YearOfBirthLabel" TextColor="Black" FontSize="Subtitle" />
+        </StackLayout>
 
-        <Label Text="Place of Birth:" FontSize="Title" />
-        <Label x:Name="PlaceOfBirthLabel" FontSize="Subtitle" />
+        <StackLayout Padding="10,0,0,0">
+            <Label Text="Place of Birth:" TextColor="Black" FontSize="Title" />
+            <Label x:Name="PlaceOfBirthLabel" TextColor="Black" FontSize="Subtitle" />
+        </StackLayout>
 
-        <Label Text="Year of Death:" FontSize="Title" />
-        <Label x:Name="YearOfDeathLabel" FontSize="Subtitle" />
+        <StackLayout Padding="10,0,0,0">
+            <Label Text="Year of Death:" TextColor="Black" FontSize="Title" />
+            <Label x:Name="YearOfDeathLabel" TextColor="Black" FontSize="Subtitle" />
+        </StackLayout>
 
-        <Label Text="Place of Death:" FontSize="Title" />
-        <Label x:Name="PlaceOfDeathLabel" FontSize="Subtitle" />
+        <StackLayout Padding="10,0,0,0">
+            <Label Text="Place of Death:" TextColor="Black" FontSize="Title" />
+            <Label x:Name="PlaceOfDeathLabel" TextColor="Black" FontSize="Subtitle" />
+        </StackLayout>
 
-        <Label Text="Additional Information:" FontSize="Title" />
-        <Label x:Name="AdditionalInfoLabel" FontSize="Subtitle" />
+        <StackLayout Padding="10,0,0,0">
+            <Label Text="Additional Information:" TextColor="Black" FontSize="Title" />
+            <Label x:Name="AdditionalInfoLabel" TextColor="Black" FontSize="Subtitle" />
+        </StackLayout>
     </StackLayout>
 </ContentPage>

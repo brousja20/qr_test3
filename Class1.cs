@@ -1,31 +1,17 @@
-namespace qr_test3
+﻿namespace qr_test3
 {
-    public partial class NewPage2 : ContentPage
+    public class ThemedContentPage : ContentPage
     {
         private const string ColorKey = "AppColor";
         private bool isDarkMode = false;
 
-        public NewPage2()
+        public ThemedContentPage()
         {
-            InitializeComponent();
             LoadColor();
         }
 
-        // Click event handler for the button to toggle between dark and light modes
-        private void Change_Theme(object sender, EventArgs e)
-        {
-            if (isDarkMode)
-            {
-                SetLightMode();
-            }
-            else
-            {
-                SetDarkMode();
-            }
-        }
-
         // Method to set the UI to dark mode
-        private void SetDarkMode()
+        protected void SetDarkMode()
         {
             this.BackgroundColor = Color.FromHex("#121212");
             ChangeFontColor("#ECECEC");
@@ -34,7 +20,7 @@ namespace qr_test3
         }
 
         // Method to set the UI to light mode
-        private void SetLightMode()
+        protected void SetLightMode()
         {
             this.BackgroundColor = Color.FromHex("#FFFFFF");
             ChangeFontColor("#000000");
@@ -42,7 +28,7 @@ namespace qr_test3
             SaveColor("#FFFFFF");
         }
 
-        private void LoadColor()
+        protected void LoadColor()
         {
             if (Preferences.ContainsKey(ColorKey))
             {
@@ -64,47 +50,37 @@ namespace qr_test3
             }
         }
 
-        private void SaveColor(string color)
+        protected void SaveColor(string color)
         {
             Preferences.Set(ColorKey, color);
         }
 
-        private void ChangeFontColor(string colorHex)
+        protected void ChangeFontColor(string colorHex)
         {
             var textColor = Color.FromHex(colorHex);
-
-            // Change the font color of labels
-            SettingsLabel.TextColor = textColor;
-            ThemeLabel.TextColor = textColor;
-
-            // Change the font color of the button
-            ThemeButton.TextColor = textColor;
-        }
-    }
-}
-
-
-/*
- namespace qr_test3
-{
-    public partial class NewPage2 : ThemedContentPage // Ensure NewPage2 inherits from ThemedContentPage
-    {
-        public NewPage2()
-        {
-            InitializeComponent();
+            ApplyFontColorRecursive(this.Content, textColor);
         }
 
-        private void Change_Theme(object sender, EventArgs e)
+        private void ApplyFontColorRecursive(View view, Color color)
         {
-            if (isDarkMode)
+            if (view is Layout layout)
             {
-                SetLightMode();
+                foreach (var child in layout.Children)
+                {
+                    if (child is View)
+                    {
+                        ApplyFontColorRecursive((View)child, color);
+                    }
+                }
             }
-            else
+            else if (view is Label label)
             {
-                SetDarkMode();
+                label.TextColor = color;
+            }
+            else if (view is Button button)
+            {
+                button.TextColor = color;
             }
         }
     }
 }
- */

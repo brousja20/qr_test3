@@ -5,8 +5,25 @@
              Title="NewPage2">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            x:Name="SettingsLabel"
+            Text="Settings 🤙"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            Margin="10"
+            FontSize="20"
+            />
+        <Label
+            x:Name="ThemeLabel"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10"
+        >Theme</Label>
+        <Button 
+            x:Name="ThemeButton"
+            Text="Toggle" 
+            WidthRequest="75" 
+            Margin="10"
+            Clicked="Change_Theme"
+            ></Button>
     </VerticalStackLayout>
 </ContentPage>

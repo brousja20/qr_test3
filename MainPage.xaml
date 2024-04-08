@@ -11,9 +11,12 @@
 
         <zxing:CameraBarcodeReaderView Grid.Row="0" x:Name="barcodeReader" BarcodesDetected="barcodeReader_BarcodesDetected" />
 
-        <StackLayout Grid.Row="1" Orientation="Horizontal" BackgroundColor="LightGray">
-            <Button Text="Create QR Code" Clicked="Home_Clicked" HorizontalOptions="FillAndExpand" />
-            <Button Text="Settings" Clicked="About_Clicked" HorizontalOptions="FillAndExpand" />
+        <StackLayout Grid.Row="1" Orientation="Horizontal" BackgroundColor="#005143">
+            <ImageButton Source="Resources/Images/user.svg" Clicked="Home_Clicked" HorizontalOptions="FillAndExpand" Aspect="AspectFit"/>
+            <ImageButton Source="Resources/Images/settings.svg" Clicked="About_Clicked" HorizontalOptions="FillAndExpand" Aspect="AspectFit"/>
         </StackLayout>
+
+
+
     </Grid>
 </ContentPage>
